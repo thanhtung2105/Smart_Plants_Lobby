@@ -1,0 +1,47 @@
+#include <Adafruit_NeoPixel.h>
+
+int ButtonA = 3;
+int ButtonB = 4;
+int ButtonC = 5;
+int ButtonSwitch = 9;
+
+Adafruit_NeoPixel LedA= Adafruit_NeoPixel(30, 6, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel LedB= Adafruit_NeoPixel(30, 7, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel LedC= Adafruit_NeoPixel(30, 8, NEO_GRB + NEO_KHZ800);
+
+void loop()
+{
+if(ButtonSwich == 1)
+{
+	lcd.print("Status: Manual");
+	while(ButtonSwitch == 1)
+	{
+		if(ButtonA == 1)
+		{
+			relayA.on()
+			LedA.sangdan();
+		}
+		else
+		{
+			LedA.off();
+			relayA.off();
+		}
+		
+		LedA.tatdan()
+		LedB.tatdan()
+		LedC.tatdan()		
+
+		if(ButtonB == 1)
+		{
+			relayB.on()
+			LedB.rainbow();
+		}
+		else
+		{
+			LedB.off();
+			relayB.off();
+		}
+		
+		
+	}
+}
